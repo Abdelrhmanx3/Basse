@@ -1,0 +1,367 @@
+{
+  "categories": [
+    {
+      "id": "crew-neck",
+      "name": { "ar": "كرو نك", "en": "Crew neck" }
+    },
+    {
+      "id": "hoodie",
+      "name": { "ar": "هوديز", "en": "Hoodies" }
+    },
+    {
+      "id": "suit",
+      "name": { "ar": "ترنجات", "en": "Tracksuits" }
+    },
+    {
+      "id": "sweatpants",
+      "name": { "ar": "بناطيل رياضية", "en": "Sweatpants" }
+    }
+  ],
+  "products": [
+    {
+      "id": "crew-neck-01",
+      "slug": "men-oversized-crew-neck",
+      "gender": "men",
+      "category": "crew-neck",
+      "name": {
+        "ar": "كرو نك أوفرسايز رجالي",
+        "en": "Men's oversized crew neck"
+      },
+      "description": {
+        "ar": "سويت شيرت بقصة أوفرسايز من قماش فليس ثقيل وناعم، بياقة وأساور مضلعة تناسب كل يوم.",
+        "en": "An oversized crew neck in heavyweight, soft fleece with ribbed collar and cuffs, made for everyday wear."
+      },
+      "price": 600,
+      "oldPrice": 850,
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "colors": [
+        {
+          "name": { "ar": "أسود", "en": "Black" },
+          "hex": "#1a1a1a",
+          "images": [
+            "data/crew-neck/men/crew-neck-01-black-1.jpg",
+            "data/crew-neck/men/crew-neck-01-black-3.jpg",
+            "data/crew-neck/men/crew-neck-01-black-2.jpg"
+          ]
+        },
+        {
+          "name": { "ar": "أبيض", "en": "White" },
+          "hex": "#f4f1ea",
+          "images": [
+            "data/crew-neck/men/crew-neck-01-white-3.jpg",
+            "data/crew-neck/men/crew-neck-01-white-4.jpg",
+            "data/crew-neck/men/crew-neck-01-white-1.jpg",
+            "data/crew-neck/men/crew-neck-01-white-2.jpg"
+          ]
+        }
+      ],
+      "featured": true,
+      "isNew": true,
+      "rating": 4.8
+    },
+    {
+      "id": "crew-neck-02",
+      "slug": "women-oversized-crew-neck",
+      "gender": "women",
+      "category": "crew-neck",
+      "name": {
+        "ar": "كرو نك أوفرسايز حريمي",
+        "en": "Women's oversized crew neck"
+      },
+      "description": {
+        "ar": "سويت شيرت واسع بقماش فليس دافئ وناعم، قصة مريحة سهلة التنسيق مع الجينز.",
+        "en": "A relaxed oversized crew neck in warm, soft fleece, easy to style with denim."
+      },
+      "price": 600,
+      "oldPrice": 850,
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "colors": [
+        {
+          "name": { "ar": "أسود", "en": "Black" },
+          "hex": "#1a1a1a",
+          "images": [
+            "data/crew-neck/women/crew-neck-02-black-2.jpg",
+            "data/crew-neck/women/crew-neck-02-black-3.jpg",
+            "data/crew-neck/women/crew-neck-02-black-1.jpg"
+          ]
+        },
+        {
+          "name": { "ar": "أبيض", "en": "White" },
+          "hex": "#f4f1ea",
+          "images": [
+            "data/crew-neck/women/crew-neck-02-white-1.jpg",
+            "data/crew-neck/women/crew-neck-02-white-2.jpg",
+            "data/crew-neck/women/crew-neck-02-white-3.jpg"
+          ]
+        }
+      ],
+      "featured": true,
+      "isNew": true,
+      "rating": 4.8
+    },
+    {
+      "id": "hoodie-01",
+      "slug": "men-oversized-hoodie",
+      "gender": "men",
+      "category": "hoodie",
+      "name": {
+        "ar": "هودي أوفرسايز رجالي",
+        "en": "Men's oversized hoodie"
+      },
+      "description": {
+        "ar": "هودي بقصة أوفرسايز من فليس سميك ودافئ، بجيب أمامي وكاب واسع وأساور مضلعة.",
+        "en": "An oversized hoodie in thick, warm fleece with a kangaroo pocket, roomy hood and ribbed cuffs."
+      },
+      "price": 700,
+      "oldPrice": 1000,
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "colors": [
+        {
+          "name": { "ar": "أسود", "en": "Black" },
+          "hex": "#1a1a1a",
+          "images": [
+            "data/hoodie/men/hoodie-1-black-2.jpg",
+            "data/hoodie/men/hoodie-1-black-1.jpg",
+            "data/hoodie/men/hoodie-1-black-3.jpg"
+          ]
+        },
+        {
+          "name": { "ar": "بوردو", "en": "Burgundy" },
+          "hex": "#5a1f2b",
+          "images": [
+            "data/hoodie/men/hoodie-1-burgundy-3.jpg",
+            "data/hoodie/men/hoodie-1-burgundy-4.jpg",
+            "data/hoodie/men/hoodie-1-burgundy-1.jpg",
+            "data/hoodie/men/hoodie-1-burgundy-2.jpg"
+          ]
+        },
+        {
+          "name": { "ar": "رمادي", "en": "Heather grey" },
+          "hex": "#b9b9b9",
+          "images": [
+            "data/hoodie/men/hoodie-1-white-2.jpg",
+            "data/hoodie/men/hoodie-1-white-1.jpg",
+            "data/hoodie/men/hoodie-1-white-3.jpg"
+          ]
+        },
+        {
+          "name": { "ar": "أبيض", "en": "White" },
+          "hex": "#f4f1ea",
+          "images": [
+            "data/hoodie/men/hoodie-1-white-4.jpg",
+            "data/hoodie/men/hoodie-1-white-5.jpg",
+            "data/hoodie/men/hoodie-1-white-6.jpg"
+          ]
+        }
+      ],
+      "featured": true,
+      "isNew": true,
+      "rating": 4.9
+    },
+    {
+      "id": "hoodie-02",
+      "slug": "women-oversized-hoodie",
+      "gender": "women",
+      "category": "hoodie",
+      "name": {
+        "ar": "هودي أوفرسايز حريمي",
+        "en": "Women's oversized hoodie"
+      },
+      "description": {
+        "ar": "هودي واسع بقماش فليس ناعم ودافئ، بجيب أمامي وكاب مريح وقصة سهلة التنسيق مع الجينز.",
+        "en": "A relaxed oversized hoodie in soft, warm fleece with a front pocket and roomy hood, easy to style with denim."
+      },
+      "price": 700,
+      "oldPrice": 1000,
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "colors": [
+        {
+          "name": { "ar": "أسود", "en": "Black" },
+          "hex": "#1a1a1a",
+          "images": [
+            "data/hoodie/women/hoodie-2-color-black-2.jpeg",
+            "data/hoodie/women/hoodie-2-color-black-1.jpeg",
+            "data/hoodie/women/hoodie-2-color-black-3.jpeg"
+          ]
+        },
+        {
+          "name": { "ar": "بوردو", "en": "Burgundy" },
+          "hex": "#5a1f2b",
+          "images": [
+            "data/hoodie/women/hoodie-2-color-burgundy-3.jpg",
+            "data/hoodie/women/hoodie-2-color-burgundy-1.jpg",
+            "data/hoodie/women/hoodie-2-color-burgundy-2.jpg"
+          ]
+        },
+        {
+          "name": { "ar": "أبيض", "en": "White" },
+          "hex": "#f4f1ea",
+          "images": [
+            "data/hoodie/women/hoodie-2-color-white-3.jpeg",
+            "data/hoodie/women/hoodie-2-color-white-2.jpeg",
+            "data/hoodie/women/hoodie-2-color-white-1.jpeg"
+          ]
+        }
+      ],
+      "featured": false,
+      "isNew": true,
+      "rating": 4.8
+    },
+    {
+      "id": "suit-01",
+      "slug": "men-oversized-tracksuit",
+      "gender": "men",
+      "category": "suit",
+      "name": {
+        "ar": "ترنج أوفرسايز رجالي",
+        "en": "Men's oversized tracksuit"
+      },
+      "description": {
+        "ar": "طقم هودي وبنطلون واسع من فليس سميك ودافئ، قصة أوفرسايز مريحة تناسب كل يوم.",
+        "en": "A hoodie and wide-leg pants set in thick, warm fleece with a comfortable oversized fit for everyday wear."
+      },
+      "price": 1200,
+      "oldPrice": 1440,
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "colors": [
+        {
+          "name": { "ar": "أسود", "en": "Black" },
+          "hex": "#1a1a1a",
+          "images": [
+            "data/suit/men/suit-1-color-black-1.jpeg",
+            "data/suit/men/suit-1-color-black-2.jpeg"
+          ]
+        },
+        {
+          "name": { "ar": "رمادي", "en": "Heather grey" },
+          "hex": "#b9b9b9",
+          "images": [
+            "data/suit/men/suit-1-color-white-2.jpg",
+            "data/suit/men/suit-1-color-white-1.jpg"
+          ]
+        }
+      ],
+      "featured": true,
+      "isNew": true,
+      "rating": 4.8
+    },
+    {
+      "id": "suit-02",
+      "slug": "women-oversized-tracksuit",
+      "gender": "women",
+      "category": "suit",
+      "name": {
+        "ar": "ترنج أوفرسايز حريمي",
+        "en": "Women's oversized tracksuit"
+      },
+      "description": {
+        "ar": "طقم هودي وبنطلون واسع بقماش فليس ناعم ودافئ، قصة مريحة وأنيقة.",
+        "en": "A hoodie and wide-leg pants set in soft, warm fleece with a relaxed, stylish fit."
+      },
+      "price": 1200,
+      "oldPrice": 1440,
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "colors": [
+        {
+          "name": { "ar": "أسود", "en": "Black" },
+          "hex": "#1a1a1a",
+          "images": [
+            "data/suit/women/suit-2-color-black-1.jpeg",
+            "data/suit/women/suit-2-color-black-2.jpeg",
+            "data/suit/women/suit-2-color-black-3.jpeg"
+          ]
+        },
+        {
+          "name": { "ar": "أبيض", "en": "White" },
+          "hex": "#f4f1ea",
+          "images": [
+            "data/suit/women/suit-2-color-white-1.jpeg",
+            "data/suit/women/suit-2-color-white-2.jpeg",
+            "data/suit/women/suit-2-color-white-3.jpeg"
+          ]
+        }
+      ],
+      "featured": true,
+      "isNew": true,
+      "rating": 4.8
+    },
+    {
+      "id": "sweatpants-01",
+      "slug": "men-wide-leg-sweatpants",
+      "gender": "men",
+      "category": "sweatpants",
+      "name": {
+        "ar": "بنطلون رياضي واسع رجالي",
+        "en": "Men's wide-leg sweatpants"
+      },
+      "description": {
+        "ar": "بنطلون رياضي واسع من فليس سميك ودافئ، بجيوب جانبية وقصة مريحة.",
+        "en": "Wide-leg sweatpants in thick, warm fleece with side pockets and a comfortable fit."
+      },
+      "price": 650,
+      "oldPrice": 900,
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "colors": [
+        {
+          "name": { "ar": "أسود", "en": "Black" },
+          "hex": "#1a1a1a",
+          "images": [
+            "data/sweatpants/men/sweatpants-1-color-black-1.jpg",
+            "data/sweatpants/men/sweatpants-1-color-black-2.jpg"
+          ]
+        },
+        {
+          "name": { "ar": "رمادي", "en": "Heather grey" },
+          "hex": "#b9b9b9",
+          "images": [
+            "data/sweatpants/men/sweatpants-1-color-white-1.jpg",
+            "data/sweatpants/men/sweatpants-1-color-white-2.jpg"
+          ]
+        }
+      ],
+      "featured": false,
+      "isNew": true,
+      "rating": 4.7
+    },
+    {
+      "id": "sweatpants-02",
+      "slug": "women-wide-leg-sweatpants",
+      "gender": "women",
+      "category": "sweatpants",
+      "name": {
+        "ar": "بنطلون رياضي واسع حريمي",
+        "en": "Women's wide-leg sweatpants"
+      },
+      "description": {
+        "ar": "بنطلون رياضي واسع بخصر مطاطي وحبل للتعديل، من فليس ناعم ودافئ.",
+        "en": "Wide-leg sweatpants in soft, warm fleece with an elastic waist and adjustable drawstring."
+      },
+      "price": 650,
+      "oldPrice": 900,
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "colors": [
+        {
+          "name": { "ar": "أسود", "en": "Black" },
+          "hex": "#1a1a1a",
+          "images": [
+            "data/sweatpants/women/sweatpants-2-color-black-3.jpg",
+            "data/sweatpants/women/sweatpants-2-color-black-1.jpg",
+            "data/sweatpants/women/sweatpants-2-color-black-2.jpg"
+          ]
+        },
+        {
+          "name": { "ar": "رمادي", "en": "Heather grey" },
+          "hex": "#b9b9b9",
+          "images": [
+            "data/sweatpants/women/sweatpants-2-color-white-2.jpg",
+            "data/sweatpants/women/sweatpants-2-color-white-1.jpg",
+            "data/sweatpants/women/sweatpants-2-color-white-3.jpg"
+          ]
+        }
+      ],
+      "featured": false,
+      "isNew": true,
+      "rating": 4.7
+    }
+  ]
+}
