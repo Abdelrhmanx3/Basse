@@ -6,7 +6,7 @@ import { useCart } from "../context/CartContext";
 import { useLanguage } from "../context/LangContext";
 import { useProducts } from "../context/ProductsContext";
 import { siteConfig } from "../data/siteConfig.js";
-import { formatPrice, getShippingFee, getSubtotal } from "../utils/formatPrice";
+import { formatPrice, getSubtotal } from "../utils/formatPrice";
 import { CartItemRow } from "./CartItemRow";
 import { Icon } from "./Icon";
 import { ProductLoadError } from "./ProductsStates";
@@ -23,7 +23,6 @@ export function CartDrawer({
   const { language, t } = useLanguage();
   const { products, loading, error, retry } = useProducts();
   const subtotal = getSubtotal(items, products);
-  const shipping = getShippingFee(subtotal);
 
   useEffect(() => {
     const dialog = dialogRef.current;
@@ -97,13 +96,9 @@ export function CartDrawer({
                 <span className="text-[#68645d] dark:text-[#c1bbaf]">{t.subtotal}</span>
                 <span className="font-medium tabular-nums">{formatPrice(subtotal, language)}</span>
               </div>
-              <div className="flex justify-between py-1.5 text-sm">
-                <span className="text-[#68645d] dark:text-[#c1bbaf]">{t.shipping}</span>
-                <span>{shipping === 0 ? t.free : formatPrice(shipping, language)}</span>
-              </div>
               <div className="mt-2 flex justify-between border-t border-[#ece9e3] dark:border-[#403d35] pt-3 text-base font-semibold">
                 <span>{t.total}</span>
-                <span className="tabular-nums">{formatPrice(subtotal + shipping, language)}</span>
+                <span className="tabular-nums">{formatPrice(subtotal, language)}</span>
               </div>
               <div className="mt-4 grid gap-2">
                 <Link
