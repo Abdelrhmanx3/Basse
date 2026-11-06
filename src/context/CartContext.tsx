@@ -94,8 +94,11 @@ export function CartProvider({ children }: { children: ReactNode }) {
     const product = products.find((entry) => entry.id === line.productId);
     return Boolean(
       product &&
-        product.sizes.includes(line.size) &&
-        product.colors.some((color) => color.hex === line.color.hex),
+        product.colors.some(
+          (color) =>
+            color.hex === line.color.hex &&
+            (color.sizes ?? product.sizes).includes(line.size),
+        ),
     );
   });
 

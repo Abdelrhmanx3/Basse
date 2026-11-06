@@ -26,12 +26,14 @@ export function ProductsExplorer({
   initialSearch,
   initialSort,
   initialMaxPrice,
+  initialSize,
 }: {
   initialCategory: string;
   initialFavorites: boolean;
   initialSearch: string;
   initialSort: SortOption;
   initialMaxPrice: number;
+  initialSize: string;
 }) {
   const { language, t } = useLanguage();
   const { favorites } = useWishlist();
@@ -40,9 +42,17 @@ export function ProductsExplorer({
   const [search, setSearch] = useState(initialSearch);
   const [sort, setSort] = useState<SortOption>(initialSort);
   const [maxPrice, setMaxPrice] = useState(initialMaxPrice);
+  const [size, setSize] = useState(initialSize);
   const activeCategory = categories.some((item) => item.id === category)
     ? category
     : "";
+  const availableSizes = useMemo(
+    () => [...new Set(products.flatMap((product) =>
+      product.colors.flatMap((color) => color.sizes ?? product.sizes),
+    ))],
+    [products],
+  );
+  const activeSize = availableSizes.includes(size) ? size : "";
   const emptyStateImage = products[0]?.colors[0]?.images[0];
 
   const filteredProducts = useMemo(() => {
@@ -55,7 +65,12 @@ export function ProductsExplorer({
         product.description[language].toLocaleLowerCase(language).includes(normalizedSearch);
       const matchesPrice = product.price <= maxPrice;
       const matchesFavorite = !initialFavorites || favorites.includes(product.id);
-      return matchesCategory && matchesSearch && matchesPrice && matchesFavorite;
+      const matchesSize =
+        !activeSize ||
+        product.colors.some((color) =>
+          (color.sizes ?? product.sizes).includes(activeSize),
+        );
+      return matchesCategory && matchesSearch && matchesPrice && matchesFavorite && matchesSize;
     });
 
     return filtered.toSorted((left, right) => {
@@ -66,7 +81,7 @@ export function ProductsExplorer({
       }
       return Number(right.featured) - Number(left.featured);
     });
-  }, [activeCategory, favorites, initialFavorites, language, maxPrice, products, search, sort]);
+  }, [activeCategory, activeSize, favorites, initialFavorites, language, maxPrice, products, search, sort]);
 
   const navigate = (key: string, value: string) => {
     window.history.replaceState(null, "", updateQuery(key, value));
@@ -77,6 +92,7 @@ export function ProductsExplorer({
     setSearch("");
     setSort("featured");
     setMaxPrice(2500);
+    setSize("");
     window.history.replaceState(null, "", window.location.pathname);
   };
 
@@ -148,7 +164,7 @@ export function ProductsExplorer({
             ))}
           </div>
 
-          <div className="mb-8 grid gap-4 border-y border-[#e9e6df] dark:border-[#403d35] py-4 sm:grid-cols-[minmax(220px,1fr)_minmax(150px,0.6fr)_minmax(200px,0.8fr)] sm:items-end">
+          <div className="mb-8 grid gap-4 border-y border-[#e9e6df] dark:border-[#403d35] py-4 sm:grid-cols-[minmax(220px,1fr)_minmax(120px,0.6fr)_minmax(120px,0.6fr)_minmax(180px,0.8fr)] sm:items-end">
             <div>
               <label className="sr-only" htmlFor="product-search">{t.search}</label>
               <div className="flex min-h-11 items-center gap-2 border-b border-[#cfcac0] dark:border-[#514d43] focus-within:border-[#76511e]">
@@ -167,6 +183,24 @@ export function ProductsExplorer({
                   value={search}
                 />
               </div>
+            </div>
+            <div>
+              <label className="mb-1 block text-[11px] text-[#69655d] dark:text-[#c1bbaf]" htmlFor="filter-size">{t.size}</label>
+              <select
+                className="min-h-11 w-full border-b border-[#cfcac0] dark:border-[#514d43] bg-transparent pe-7 text-sm outline-none focus-visible:border-[#76511e] focus-visible:ring-2 focus-visible:ring-[#a16207]"
+                id="filter-size"
+                name="size"
+                onChange={(event) => {
+                  setSize(event.target.value);
+                  navigate("size", event.target.value);
+                }}
+                value={activeSize}
+              >
+                <option value="">{t.allSizes}</option>
+                {availableSizes.map((availableSize) => (
+                  <option key={availableSize} value={availableSize}>{availableSize}</option>
+                ))}
+              </select>
             </div>
             <div>
               <label className="mb-1 block text-[11px] text-[#69655d] dark:text-[#c1bbaf]" htmlFor="sort-products">{t.sort}</label>

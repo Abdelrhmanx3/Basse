@@ -7,7 +7,6 @@ import { useCart } from "../context/CartContext";
 import { useLanguage } from "../context/LangContext";
 import { useProducts } from "../context/ProductsContext";
 import { siteConfig } from "../data/siteConfig.js";
-import { governorates } from "../i18n/translations.js";
 import { buildWhatsAppInvoice } from "../utils/buildWhatsAppInvoice";
 import { formatPrice } from "../utils/formatPrice";
 import { validateCheckout, type CheckoutFields } from "../utils/validators";
@@ -83,6 +82,9 @@ export function CheckoutContent() {
     if (!items.length) return;
 
     const nextErrors = validateCheckout(fields);
+    // City and governorate inputs were removed, so never block the order on them.
+    delete nextErrors.governorate;
+    delete nextErrors.city;
     if (Object.keys(nextErrors).length > 0) {
       setErrors(nextErrors);
       setFormError("validation");
@@ -227,44 +229,6 @@ export function CheckoutContent() {
                 value={fields.phone2}
               />
               {errors.phone2 && <p className="mt-1 text-xs text-[#a22c25] dark:text-[#f3b1a7]" id="phone2-error">{errorMessage(errors.phone2)}</p>}
-            </div>
-            <div>
-              <label className="mb-1.5 block text-sm font-medium" htmlFor="governorate">{t.governorate} *</label>
-              <select
-                aria-describedby={errors.governorate ? "governorate-error" : undefined}
-                aria-invalid={Boolean(errors.governorate)}
-                autoComplete="address-level1"
-                className={inputClass}
-                id="governorate"
-                name="address-level1"
-                onChange={(event) => updateField("governorate", event.target.value)}
-                required
-                value={fields.governorate}
-              >
-                <option value="">{t.chooseGovernorate}</option>
-                {governorates.en.map((englishName, index) => (
-                  <option key={englishName} value={englishName}>
-                    {governorates[language][index]}
-                  </option>
-                ))}
-              </select>
-              {errors.governorate && <p className="mt-1 text-xs text-[#a22c25] dark:text-[#f3b1a7]" id="governorate-error">{errorMessage(errors.governorate)}</p>}
-            </div>
-            <div>
-              <label className="mb-1.5 block text-sm font-medium" htmlFor="city">{t.city} *</label>
-              <input
-                aria-describedby={errors.city ? "city-error" : undefined}
-                aria-invalid={Boolean(errors.city)}
-                autoComplete="address-level2"
-                className={inputClass}
-                id="city"
-                name="address-level2"
-                onChange={(event) => updateField("city", event.target.value)}
-                placeholder={t.cityPlaceholder}
-                required
-                value={fields.city}
-              />
-              {errors.city && <p className="mt-1 text-xs text-[#a22c25] dark:text-[#f3b1a7]" id="city-error">{errorMessage(errors.city)}</p>}
             </div>
             <div className="sm:col-span-2">
               <label className="mb-1.5 block text-sm font-medium" htmlFor="address">{t.detailedAddress} *</label>

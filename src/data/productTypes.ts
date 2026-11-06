@@ -6,6 +6,7 @@ export type LocalizedText = {
 export type ProductColor = {
   name: LocalizedText;
   hex: string;
+  sizes?: string[];
   images: string[];
 };
 

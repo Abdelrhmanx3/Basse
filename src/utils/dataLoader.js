@@ -54,6 +54,9 @@ function mapColor(color) {
   return {
     name,
     hex: typeof color.hex === "string" ? color.hex : "#808080",
+    sizes: Array.isArray(color.sizes)
+      ? color.sizes.filter((size) => typeof size === "string")
+      : undefined,
     images,
   };
 }

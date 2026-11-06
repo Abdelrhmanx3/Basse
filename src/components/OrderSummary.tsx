@@ -4,19 +4,12 @@ import { siteConfig } from "../data/siteConfig.js";
 import type { CartLine } from "../context/CartContext";
 import { useLanguage } from "../context/LangContext";
 import { useProducts } from "../context/ProductsContext";
-import { formatPrice, getShippingFee, getSubtotal } from "../utils/formatPrice";
+import { formatPrice, getSubtotal } from "../utils/formatPrice";
 
-export function OrderSummary({
-  items,
-  governorate,
-}: {
-  items: CartLine[];
-  governorate?: string;
-}) {
+export function OrderSummary({ items }: { items: CartLine[] }) {
   const { language, t } = useLanguage();
   const { products } = useProducts();
   const subtotal = getSubtotal(items, products);
-  const shipping = getShippingFee(subtotal, governorate);
 
   return (
     <section className="border border-[#e8e4dc] dark:border-[#403d35] bg-white dark:bg-[#201f1b] p-5 sm:p-6">
@@ -25,12 +18,6 @@ export function OrderSummary({
         <div className="flex items-center justify-between gap-3">
           <dt className="text-[#68645d] dark:text-[#c1bbaf]">{t.subtotal}</dt>
           <dd className="m-0 font-medium tabular-nums">{formatPrice(subtotal, language)}</dd>
-        </div>
-        <div className="flex items-center justify-between gap-3">
-          <dt className="text-[#68645d] dark:text-[#c1bbaf]">{t.shipping}</dt>
-          <dd className="m-0 font-medium">
-            {shipping === 0 ? t.free : formatPrice(shipping, language)}
-          </dd>
         </div>
       </dl>
       {subtotal > 0 && subtotal < siteConfig.freeShippingThreshold && (
@@ -46,7 +33,7 @@ export function OrderSummary({
       )}
       <div className="mt-4 flex items-center justify-between gap-3 text-base font-semibold">
         <span>{t.total}</span>
-        <span className="tabular-nums">{formatPrice(subtotal + shipping, language)}</span>
+        <span className="tabular-nums">{formatPrice(subtotal, language)}</span>
       </div>
     </section>
   );

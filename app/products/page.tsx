@@ -54,6 +54,7 @@ export default async function ProductsPage({
       initialFavorites={firstValue(params.favorites) === "1"}
       initialMaxPrice={maxPrice}
       initialSearch={firstValue(params.search) ?? ""}
+      initialSize={firstValue(params.size) ?? ""}
       initialSort={sort}
     />
   );

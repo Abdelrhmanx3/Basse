@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { useCart } from "../context/CartContext";
 import { useLanguage } from "../context/LangContext";
@@ -36,8 +37,16 @@ export function Navbar() {
             href="/"
             onClick={closeMenu}
           >
-            <span className="grid size-9 place-items-center rounded-full bg-[#24231f] dark:bg-[#343129] font-serif text-lg font-semibold tracking-[-0.08em] text-white">
-              B
+            {/* Logo image: public/navbar-logo.png (dark circle keeps a silver logo visible in light and dark mode) */}
+            <span className="relative size-9 shrink-0 overflow-hidden rounded-full bg-[#24231f] dark:bg-[#343129]">
+              <Image
+                alt=""
+                className="scale-[1.1] object-contain"
+                fill
+                priority
+                sizes="40px"
+                src="/logo.jpeg"
+              />
             </span>
             <span className="text-[15px] font-semibold tracking-[0.14em]">
               {siteConfig.storeName[language]}

@@ -29,11 +29,18 @@ export function ProductDetailsClient({
   const sizeGroupRef = useRef<HTMLDivElement>(null);
   const colorGroupRef = useRef<HTMLDivElement>(null);
   const activeColor = selectedColor ?? product.colors[0];
+  const availableSizes = activeColor?.sizes ?? product.sizes;
   const image = activeColor?.images[selectedImage] ?? activeColor?.images[0];
   const discount = getDiscountPercentage(product.oldPrice, product.price);
 
   const selectColor = (color: ProductColor) => {
     setSelectedColor(color);
+    if (
+      selectedSize &&
+      !(color.sizes ?? product.sizes).includes(selectedSize)
+    ) {
+      setSelectedSize(null);
+    }
     setSelectedImage(0);
   };
 
@@ -188,7 +195,7 @@ export function ProductDetailsClient({
                 language={language}
                 onSelect={setSelectedSize}
                 selectedSize={selectedSize}
-                sizes={product.sizes}
+                sizes={availableSizes}
               />
             </div>
             {validationAttempted && !selectedSize && (

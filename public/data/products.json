@@ -33,7 +33,7 @@
       },
       "price": 600,
       "oldPrice": 850,
-      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "sizes": ["M", "L", "XL"],
       "colors": [
         {
           "name": { "ar": "أسود", "en": "Black" },
@@ -47,6 +47,7 @@
         {
           "name": { "ar": "أبيض", "en": "White" },
           "hex": "#f4f1ea",
+          "sizes": ["M", "L", "XL", "XXL"],
           "images": [
             "data/crew-neck/men/crew-neck-01-white-3.jpg",
             "data/crew-neck/men/crew-neck-01-white-4.jpg",
@@ -74,7 +75,7 @@
       },
       "price": 600,
       "oldPrice": 850,
-      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "sizes": ["M", "L", "XL"],
       "colors": [
         {
           "name": { "ar": "أسود", "en": "Black" },
@@ -88,6 +89,7 @@
         {
           "name": { "ar": "أبيض", "en": "White" },
           "hex": "#f4f1ea",
+          "sizes": ["M", "L", "XL", "XXL"],
           "images": [
             "data/crew-neck/women/crew-neck-02-white-1.jpg",
             "data/crew-neck/women/crew-neck-02-white-2.jpg",
@@ -114,7 +116,7 @@
       },
       "price": 700,
       "oldPrice": 1000,
-      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "sizes": ["M", "L", "XL"],
       "colors": [
         {
           "name": { "ar": "أسود", "en": "Black" },
@@ -147,6 +149,7 @@
         {
           "name": { "ar": "أبيض", "en": "White" },
           "hex": "#f4f1ea",
+          "sizes": ["M", "L", "XL", "XXL"],
           "images": [
             "data/hoodie/men/hoodie-1-white-4.jpg",
             "data/hoodie/men/hoodie-1-white-5.jpg",
@@ -173,7 +176,7 @@
       },
       "price": 700,
       "oldPrice": 1000,
-      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "sizes": ["M", "L", "XL"],
       "colors": [
         {
           "name": { "ar": "أسود", "en": "Black" },
@@ -196,10 +199,19 @@
         {
           "name": { "ar": "أبيض", "en": "White" },
           "hex": "#f4f1ea",
+          "sizes": ["M", "L", "XL", "XXL"],
           "images": [
             "data/hoodie/women/hoodie-2-color-white-3.jpeg",
             "data/hoodie/women/hoodie-2-color-white-2.jpeg",
             "data/hoodie/women/hoodie-2-color-white-1.jpeg"
+          ]
+        },
+        {
+          "name": { "ar": "رمادي", "en": "Heather grey" },
+          "hex": "#b9b9b9",
+          "images": [
+            "data/hoodie/women/hoodie-2-color-heather-grey-2.jpeg",
+            "data/hoodie/women/hoodie-2-color-heather-grey-1.jpeg"
           ]
         }
       ],
@@ -222,7 +234,7 @@
       },
       "price": 1200,
       "oldPrice": 1440,
-      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "sizes": ["M", "L", "XL"],
       "colors": [
         {
           "name": { "ar": "أسود", "en": "Black" },
@@ -236,8 +248,18 @@
           "name": { "ar": "رمادي", "en": "Heather grey" },
           "hex": "#b9b9b9",
           "images": [
-            "data/suit/men/suit-1-color-white-2.jpg",
-            "data/suit/men/suit-1-color-white-1.jpg"
+            "data/suit/men/suit-1-color-heather-grey-1.jpg",
+            "data/suit/men/suit-1-color-heather-grey-2.jpg"
+          ]
+        },
+        {
+          "name": { "ar": "أبيض", "en": "White" },
+          "hex": "#f4f1ea",
+          "sizes": ["M", "L", "XL", "XXL"],
+          "images": [
+            "data/suit/men/suit-1-color-white-1.jpeg",
+            "data/suit/men/suit-1-color-white-2.jpeg",
+            "data/suit/men/suit-1-color-white-3.jpeg"
           ]
         }
       ],
@@ -260,7 +282,7 @@
       },
       "price": 1200,
       "oldPrice": 1440,
-      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "sizes": ["M", "L", "XL"],
       "colors": [
         {
           "name": { "ar": "أسود", "en": "Black" },
@@ -274,6 +296,7 @@
         {
           "name": { "ar": "أبيض", "en": "White" },
           "hex": "#f4f1ea",
+          "sizes": ["M", "L", "XL", "XXL"],
           "images": [
             "data/suit/women/suit-2-color-white-1.jpeg",
             "data/suit/women/suit-2-color-white-2.jpeg",
@@ -300,7 +323,7 @@
       },
       "price": 650,
       "oldPrice": 900,
-      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "sizes": ["M", "L", "XL"],
       "colors": [
         {
           "name": { "ar": "أسود", "en": "Black" },
@@ -338,7 +361,7 @@
       },
       "price": 650,
       "oldPrice": 900,
-      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "sizes": ["M", "L", "XL"],
       "colors": [
         {
           "name": { "ar": "أسود", "en": "Black" },

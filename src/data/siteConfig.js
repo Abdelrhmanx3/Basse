@@ -2,7 +2,6 @@
 export const siteConfig = {
   storeName: { ar: "بيسي", en: "Basse" },
   whatsappNumber: "201141052986",
-  shippingFee: 60,
   freeShippingThreshold: 2000,
   governorateFees: {},
   currency: { ar: "ج.م", en: "EGP" },
