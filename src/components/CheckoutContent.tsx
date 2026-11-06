@@ -294,7 +294,7 @@ export function CheckoutContent() {
             </div>
           </div>
           <div className="mt-4">
-            <OrderSummary governorate={fields.governorate} items={items} />
+            <OrderSummary items={items} />
           </div>
           <button
             className="mt-4 flex min-h-12 w-full items-center justify-center gap-2 rounded bg-[#24231f] dark:bg-[#343129] px-5 text-sm font-medium text-white transition-colors hover:bg-[#76511e] dark:hover:bg-[#5a482d] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a16207]"
