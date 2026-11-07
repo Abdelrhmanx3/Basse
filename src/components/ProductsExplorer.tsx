@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import { useLanguage } from "../context/LangContext";
 import { useWishlist } from "../context/CartContext";
@@ -43,6 +43,11 @@ export function ProductsExplorer({
   const [sort, setSort] = useState<SortOption>(initialSort);
   const [maxPrice, setMaxPrice] = useState(initialMaxPrice);
   const [size, setSize] = useState(initialSize);
+  useEffect(() => setCategory(initialCategory), [initialCategory]);
+  useEffect(() => setSearch(initialSearch), [initialSearch]);
+  useEffect(() => setSort(initialSort), [initialSort]);
+  useEffect(() => setMaxPrice(initialMaxPrice), [initialMaxPrice]);
+  useEffect(() => setSize(initialSize), [initialSize]);
   const activeCategory = categories.some((item) => item.id === category)
     ? category
     : "";
